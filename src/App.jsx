@@ -46,7 +46,8 @@ const App = () => {
   useEffect(() => {
     loadFFmpeg();
     // Initialize Background Removal Worker
-    workerRef.current = new Worker(new URL('./bgRemoval.worker.js', import.meta.url), { type: 'module' });
+  // IS LINE KO LAGA DO:
+workerRef.current = new BgWorker();
     workerRef.current.onmessage = (e) => {
       setIsProcessing(false);
       if (e.data.success) {
