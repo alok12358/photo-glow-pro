@@ -1,3 +1,4 @@
+import BgWorker from './bgRemoval.worker.js?worker';
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 // FIX: Added 'Sparkles' and 'CheckCircle' to imports to prevent Blank Screen
 import {
